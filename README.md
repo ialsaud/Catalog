@@ -3,7 +3,7 @@ Place your catalog project in this directory.
 
 
 
-## pagaes
+## pages
 
 website has multiple pages
 
