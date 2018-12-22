@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row">
+		<div class="col-lg-6">
+			<h3>{{category.name}}</h3>
+		</div>
+		<div class="col-lg-6">
+			<h3>items</h3>
+			<ul>
+			{% for item in items %}
+				<li><a href="{{url_for('itemDetails', category_id=item.category_id, item_id=item.id)}}">{{item.name}}</a></li>
+			{% endfor %}
+				<li><a href="{{url_for('itemCreate')}}"><button>create your own!</button></a></li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

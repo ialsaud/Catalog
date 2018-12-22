@@ -1,0 +1,184 @@
+{
+  "Category": [
+    {
+      "Item": [
+        {
+          "cate_id": 1, 
+          "description": "light but uncomfortable\n             chair Lorem Ipsum is simply dummy text of the printing and \n             typesetting industry. Lorem Ipsum has been the industry's \n             standard dummy text ever since the 1500s, when an unknown \n             printer took a galley of type and scrambled it to make a \n             type specimen book. It has survived not only five centuries, \n             but also the leap into electronic typesetting, remaining \n             essentially", 
+          "id": 1, 
+          "title": "small wood chair"
+        }, 
+        {
+          "cate_id": 1, 
+          "description": "heavy but uncomfortable\n             chair Lorem Ipsum is simply dummy text of the printing and \n             typesetting industry. Lorem Ipsum has been the industry's \n             standard dummy text ever since the 1500s, when an unknown \n             printer took a galley of type and scrambled it to make a \n             type specimen book. It has survived not only five centuries, \n             but also the leap into electronic typesetting, remaining \n             essentially", 
+          "id": 2, 
+          "title": "big wood chair"
+        }, 
+        {
+          "cate_id": 1, 
+          "description": "heavy comfortable\n             chair Lorem Ipsum is simply dummy text of the printing and \n             typesetting industry. Lorem Ipsum has been the industry's \n             standard dummy text ever since the 1500s, when an unknown \n             printer took a galley of type and scrambled it to make a \n             type specimen book. It has survived not only five centuries, \n             but also the leap into electronic typesetting, remaining \n             essentially", 
+          "id": 3, 
+          "title": "big fabric chair"
+        }, 
+        {
+          "cate_id": 1, 
+          "description": "heavy comfortable type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially this was edited", 
+          "id": 4, 
+          "title": "leather chair"
+        }, 
+        {
+          "cate_id": 1, 
+          "description": "this chair hurts butt but look good.", 
+          "id": 9, 
+          "title": "small leather chair"
+        }, 
+        {
+          "cate_id": 1, 
+          "description": "affects you psychologically by taking away your will to stand up.", 
+          "id": 15, 
+          "title": "sticky chair"
+        }, 
+        {
+          "cate_id": 1, 
+          "description": "guarantees back pain 100% of the time.", 
+          "id": 16, 
+          "title": "bad posture chair"
+        }, 
+        {
+          "cate_id": 1, 
+          "description": "this chair is marked for you. it was curse anyone else sitting on it with back pain, nausea, and a sudden burst of diarrhea. future updates will integrate emotional synchronization that will allow scaling of effect in relation to strength of owner emotions.", 
+          "id": 26, 
+          "title": "the personal chair"
+        }
+      ], 
+      "id": 1, 
+      "name": "chairs"
+    }, 
+    {
+      "Item": [
+        {
+          "cate_id": 2, 
+          "description": "heavy fancy\n             table Lorem Ipsum is simply dummy text of the printing and \n             typesetting industry. Lorem Ipsum has been the industry's \n             standard dummy text ever since the 1500s, when an unknown \n             printer took a galley of type and scrambled it to make a \n             type specimen book. It has survived not only five centuries, \n             but also the leap into electronic typesetting, remaining \n             essentially", 
+          "id": 8, 
+          "title": "marble table"
+        }, 
+        {
+          "cate_id": 2, 
+          "description": "a table that allows all members of a family to set on it, not matter how big the family is.", 
+          "id": 17, 
+          "title": "family table"
+        }, 
+        {
+          "cate_id": 2, 
+          "description": "the example table stuff", 
+          "id": 27, 
+          "title": "example table"
+        }
+      ], 
+      "id": 2, 
+      "name": "tables"
+    }, 
+    {
+      "Item": [
+        {
+          "cate_id": 3, 
+          "description": "can blind who ever looks at it.", 
+          "id": 18, 
+          "title": "bright light"
+        }, 
+        {
+          "cate_id": 3, 
+          "description": "of course it is a warm yellow light. it aint bout that lazer focus bright white light.", 
+          "id": 19, 
+          "title": "Mr. romance light"
+        }, 
+        {
+          "cate_id": 3, 
+          "description": "yeah those that you put on your desk for decor not really reading.", 
+          "id": 20, 
+          "title": "desk lamp"
+        }
+      ], 
+      "id": 3, 
+      "name": "lights"
+    }, 
+    {
+      "Item": [
+        {
+          "cate_id": 4, 
+          "description": "it can organize your clothes.", 
+          "id": 10, 
+          "title": "dresser"
+        }
+      ], 
+      "id": 4, 
+      "name": "containers"
+    }, 
+    {
+      "Item": [
+        {
+          "cate_id": 5, 
+          "description": "the door that let u go through time and space without you noticing.", 
+          "id": 11, 
+          "title": "invisible door"
+        }, 
+        {
+          "cate_id": 5, 
+          "description": "the door that when opened, one shall NOT PASS!", 
+          "id": 12, 
+          "title": "magic door"
+        }, 
+        {
+          "cate_id": 5, 
+          "description": "the one that insist that it exists.", 
+          "id": 13, 
+          "title": "make-believe door"
+        }, 
+        {
+          "cate_id": 5, 
+          "description": "open for uninterrupted focus ", 
+          "id": 14, 
+          "title": "flow door"
+        }
+      ], 
+      "id": 5, 
+      "name": "doors"
+    }, 
+    {
+      "Item": [
+        {
+          "cate_id": 6, 
+          "description": "yeap that thing that makes you happy when weather isn't.", 
+          "id": 21, 
+          "title": "mother of all A/C"
+        }, 
+        {
+          "cate_id": 6, 
+          "description": "the root that always keeps you connected to the great tree called internet.", 
+          "id": 22, 
+          "title": "the invisible root, wifi"
+        }, 
+        {
+          "cate_id": 6, 
+          "description": "A handy tool that will do whatever is in your mind before you switch it.", 
+          "id": 23, 
+          "title": "global switch"
+        }, 
+        {
+          "cate_id": 6, 
+          "description": "phone charger that will come with a morphing cable that will adjust to your phones charging socket type and trust me the cable will reach any place.", 
+          "id": 24, 
+          "title": "super convenient charger"
+        }, 
+        {
+          "cate_id": 6, 
+          "description": "although it is simply a mechanical arm that will push the door closed just as any public store entrance door would, this door closer will sense the tension from the room owner and will close with speed that match the strength of the feeling.", 
+          "id": 25, 
+          "title": "door closer"
+        }
+      ], 
+      "id": 6, 
+      "name": "electronics"
+    }
+  ]
+}

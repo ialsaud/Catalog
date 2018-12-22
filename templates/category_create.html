@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row">
+		<div class="col-lg-6">
+			<h3>New category creation</h3>
+		</div>
+		<div class="col-lg-6">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-3"></div>
+		<div class="col-lg-6">
+			<form actoin="{{url_for('categoryCreate')}}" method="POST">
+				<div>
+					<label>name: </label>
+					<input type="text" name="name" value="">
+				</div>
+
+				<div class="button">
+  					<button type="submit">create category</button>
+				</div>
+			</form>
+
+		</div>
+		<div class="col-lg-3"></div>
+	</div>
+{% endblock %}

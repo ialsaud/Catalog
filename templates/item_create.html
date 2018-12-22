@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row">
+		<div class="col-lg-6">
+			<h3>New item creation</h3>
+		</div>
+		<div class="col-lg-6">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-3"></div>
+		<div class="col-lg-6">
+			<form actoin="{{url_for('itemCreate')}}" method="POST">
+				<div>
+					<label>name: </label>
+					<input type="text" name="name" value="">
+				</div>
+				<div>
+					<label>description: </label>
+					<div>
+						<textarea type="text" name="description" rows="10" cols="50"></textarea>
+					</div>
+				</div>
+
+				<div>
+					<label>category: </label>
+					<select name="category">
+						{% for cate in categories %}
+							<option value="{{cate.id}}">{{cate.name}}</option>
+						{% endfor %}
+			         </select>
+				</div>
+				<div class="button">
+  					<button type="submit">create item</button>
+				</div>
+			</form>
+
+		</div>
+		<div class="col-lg-3"></div>
+	</div>
+{% endblock %}

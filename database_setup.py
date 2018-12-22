@@ -1,22 +1,39 @@
-##
-# portions of the code below has been reused from the legal tree food exercise in the api lesson. 
+#!/usr/bin/env python2.7
+#
+#
+# Project two submission
+# Author: Ibrahim AlSaud
+# Date: 12/22/2018
+# Project name: catalog
+
+# Refernces
+# portions of the code below has been reused from the legal tree food
+# exercise in the api lesson.
+
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 from passlib.apps import custom_app_context as pwd_context
-import random, string
-from itsdangerous import(TimedJSONWebSignatureSerializer as Serializer, BadSignature, SignatureExpired)
+import random
+import string
+from itsdangerous import (
+    TimedJSONWebSignatureSerializer as
+    Serializer,
+    BadSignature,
+    SignatureExpired)
 
 Base = declarative_base()
 
-secret_key = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in xrange(32))
+secret_key = ''.join(random.choice(
+    string.ascii_uppercase + string.digits) for x in xrange(32))
+
 
 class User(Base):
     __tablename__ = 'user'
     id = Column(Integer, primary_key=True)
     email = Column(String, index=True)
-    username = Column(String(32), index=True)
+    username = Column(String, index=True)
     password_hash = Column(String(64))
 
     def hash_password(self, password):
@@ -27,7 +44,7 @@ class User(Base):
 
     def generate_auth_token(self, expiration=600):
         s = Serializer(secret_key, expires_in=expiration)
-        return s.dumps({'id':self.id})
+        return s.dumps({'id': self.id})
 
     @staticmethod
     def verify_auth_token(token):
@@ -45,13 +62,13 @@ class User(Base):
 class Category(Base):
     __tablename__ = 'category'
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    name = Column(String, index=True)
     user_id = Column(Integer, ForeignKey('user.id'))
+    user = relationship(User)
 
     @property
     def serialize(self):
-        return { 'id' : self.id, 'name' : self.name }
-
+        return {'id': self.id, 'name': self.name}
 
 
 class Item(Base):
@@ -60,21 +77,20 @@ class Item(Base):
     name = Column(String, index=True)
     description = Column(String)
     category_id = Column(Integer, ForeignKey('category.id'))
+    category = relationship(Category)
     user_id = Column(Integer, ForeignKey('user.id'))
-
+    user = relationship(User)
 
     @property
     def serialize(self):
-        return {
-        'cat_id' : self.category_id,
-        'description' : self.description,
-        'id' : self.id, 
-        'title' : self.name
-            }
+        return ({
+            'cat_id': self.category_id,
+            'description': self.description,
+            'id': self.id,
+            'title': self.name
+            })
 
 
 engine = create_engine('sqlite:///catalog.db')
- 
 
 Base.metadata.create_all(engine)
-    

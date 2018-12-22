@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row">
+		<div class="col-lg-6">
+			<h3>{{category.name}}</h3>
+		</div>
+		<div class="col-lg-6">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-3"></div>
+		<div class="col-lg-6">
+			<form actoin="{{url_for('itemEdit', category_id=category.id, item_id=item.id)}}" method="POST">
+				<div>
+					<label>name: </label>
+					<input type="text" name="name" value="{{item.name}}">
+				</div>
+				<div>
+					<label>description: </label>
+					<div>
+						<textarea type="text" name="description" rows="10" cols="50">{{item.description}}</textarea>
+					</div>
+				</div>
+
+				<div>
+					<label>category: </label>
+					<select name="category">
+						{% for cate in categories %}
+							<option value="{{cate.id}}"
+							{% if cate.id == category.id %} selected {% endif %}
+							>{{cate.name}}
+							</option>
+						{% endfor %}
+			         </select>
+				</div>
+				<div class="button">
+  					<button type="submit">make edits</button>
+				</div>
+			</form>
+
+		</div>
+		<div class="col-lg-3"></div>
+	</div>
+{% endblock %}
