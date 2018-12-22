@@ -1,8 +1,8 @@
 # Project 2: catalog
 Submission attempt to Misk Udacity FSDN two project. 
-**Author** Ibrahim AlSaud
-**Instructor** Elham Jaffar
-**Date** 12/22/2018
+* **Author** Ibrahim AlSaud
+* **Instructor** Elham Jaffar
+* **Date** 12/22/2018
 
 
 # getting started. 
