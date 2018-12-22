@@ -14,12 +14,12 @@
 			<form actoin="{{url_for('itemCreate')}}" method="POST">
 				<div>
 					<label>name: </label>
-					<input type="text" name="name" value="">
+					<input type="text" name="name" value="" required>
 				</div>
 				<div>
 					<label>description: </label>
 					<div>
-						<textarea type="text" name="description" rows="10" cols="50"></textarea>
+						<textarea type="text" name="description" rows="10" cols="50" required></textarea>
 					</div>
 				</div>
 

@@ -19,9 +19,20 @@
 
 from database_setup import Base, Category, Item, User
 
-from flask import Flask, jsonify, request, url_for, abort, g
-from flask import render_template, redirect, flash, make_response
-from flask import session as login_session
+from flask import (
+    Flask,
+    jsonify,
+    request,
+    url_for,
+    abort,
+    g,
+    render_template,
+    redirect,
+    flash,
+    make_response,
+    session as login_session
+)
+
 from flask_httpauth import HTTPBasicAuth
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -347,6 +358,11 @@ def itemEdit(category_id, item_id):
 
     if request.method == "POST":
 
+        # double check if the form fields are not empty
+        if request.form['name'] == '' or request.form['description'] == '':
+            flash('please fill in the empty fields.')
+            return redirect(url_for('itemEdit', category_id=category_id, item_id=item_id))
+
         item.name = request.form['name']
         item.description = request.form['description']
         item.category_id = request.form['category']
@@ -441,6 +457,12 @@ def itemCreate():
 
     if request.method == "POST":
         print('post')
+
+        # double check if the form fields are not empty
+        if request.form['name'] == '' or request.form['description'] == '':
+            flash("please fill in the empty fields.")
+            return redirect(url_for('itemCreate'))       
+
         if session.query(Item).filter_by(name=request.form['name']).first():
             flash("this item already exists.")
             return redirect(url_for('itemCreate'))
@@ -481,6 +503,11 @@ def categoryCreate():
         return render_template('category_create.html', client_id=CLIENT_ID)
 
     if request.method == "POST":
+
+        # double check if the form fields are not empty
+        if request.form['name'] == '':
+            flash("please fill in the empty fields.")
+            return redirect(url_for('categoryCreate'))        
 
         if session.query(Category).filter_by(
                 name=request.form['name']).first():

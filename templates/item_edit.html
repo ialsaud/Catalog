@@ -14,12 +14,12 @@
 			<form actoin="{{url_for('itemEdit', category_id=category.id, item_id=item.id)}}" method="POST">
 				<div>
 					<label>name: </label>
-					<input type="text" name="name" value="{{item.name}}">
+					<input type="text" name="name" value="{{item.name}}" required>
 				</div>
 				<div>
 					<label>description: </label>
 					<div>
-						<textarea type="text" name="description" rows="10" cols="50">{{item.description}}</textarea>
+						<textarea type="text" name="description" rows="10" cols="50" required>{{item.description}}</textarea>
 					</div>
 				</div>
 
